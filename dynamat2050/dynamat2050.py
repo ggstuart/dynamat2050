@@ -5,13 +5,14 @@ import json
 from requests import get, codes
 from requests.exceptions import MissingSchema, InvalidSchema, ConnectionError, InvalidURL
 
+class DynamatError(Exception): pass
+
+
 log = logging.getLogger('dynamat2050')
 
 # 'url': 'https://subdomain.dynamat2050.com/ProductService.svc',
 # 'username': '',
 # 'password': ''
-
-class DynamatError(Exception): pass
 
 class Client():
 
