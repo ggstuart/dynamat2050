@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup(name='dynamat2050',
-    version='0.1.0',
+    version='0.2.0',
     description='A library for accessing data from the Dynamat2050 API',
     keywords='energy consumption data API',
     classifiers=[
