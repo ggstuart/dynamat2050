@@ -140,7 +140,10 @@ def data(argv=sys.argv):
         log.error(err)
 
     outdir = 'output'
-    os.makedirs(outdir)
+    try:
+        os.makedirs(outdir)
+    except FileExistsError:
+        pass
     for meter in args:
         log.info("attempting to get meter data for '{}'".format(meter))
         data = client.meter_data(meter, now - one_year, now).decode('utf-8')
