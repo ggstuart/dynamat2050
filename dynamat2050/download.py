@@ -107,6 +107,7 @@ def meters(argv=sys.argv):
         client = pop_client(args)
     except DynamatConfigError as err:
         log.error(err)
+        exit()
 
     log.info("attempting to get meters list")
     meters = client.meters()
