@@ -80,7 +80,7 @@ class Client():
         if response.status_code == codes.bad_request:
             raise DynamatError("Bad request")
         if response.status_code == codes.not_found:
-            raise DynamatError("Invalid URL - not a dynamat2050 server")
+            raise DynamatError("Not found: {}".format(response.url))
         if response.status_code == codes.forbidden:
             raise DynamatError("Unauthorised")
         if response.status_code == codes.server_error:
