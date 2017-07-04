@@ -68,7 +68,7 @@ class Client():
             try:
                 connect_to_google()
             except ConnectionError as e:
-                raise SourceConnectionError(exc)
+                raise DynamatError("Could not connect - check network")
             raise DynamatError("Could not connect - check url")
         except (MissingSchema, InvalidSchema):
             raise DynamatError("Missing schema in url (e.g. https://)")
