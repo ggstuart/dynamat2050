@@ -1,6 +1,11 @@
 # dynamat2050
 A python library for accessing data from Dynamat2050
 
+## Installation
+```
+pip install dynamat2050
+```
+
 ## Usage
 
 There are two commands.
