@@ -40,6 +40,8 @@ class Client():
         except:
             print(response)
         if data:
+            if isinstance(data, list) and len(data) == 1:
+                data = data[0]
             return json.dumps(data).encode('utf-8')
 
     def consumption(self, meter_id, from_, to, interval, n_intervals):
